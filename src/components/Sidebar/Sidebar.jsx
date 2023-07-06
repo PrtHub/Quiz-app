@@ -44,35 +44,44 @@ const Sidebar = () => {
           <h1 className="sidebar__header_title">QUIZ</h1>
           <div className="sidebar__mobile_menu-icons">
             {toggle ? (
-              <AiOutlineClose fontSize={24}  cursor="pointer" onClick={() => setToggle(false)} />
+              <AiOutlineClose
+                fontSize={24}
+                cursor="pointer"
+                onClick={() => setToggle(false)}
+              />
             ) : (
-              <FiMenu fontSize={24}  cursor="pointer" onClick={() => setToggle(true)} />
+              <FiMenu
+                fontSize={24}
+                cursor="pointer"
+                onClick={() => setToggle(true)}
+              />
             )}
           </div>
 
-           { toggle && (
+          {toggle && (
             <div className="sidebar__mobile_toggle">
-            <section className="sidebar__mobile_toggle__header">
-              <h1 className="">QUIZ</h1>
-              <div className="sidebar__mobile_toggle__header_icons">
-                <Link to="/">
-                  <AiFillHome
-                    className={`${locationPath("/") ? "icons" : "icon"}`}
-                  />
-                </Link>
-                <Link to="/quizes">
-                  <MdQuiz
-                    className={`${locationPath("/quizes") ? "icons" : "icon"}`}
-                  />
-                </Link>
-              </div>
-            </section>
-            <section className="sidebar__mobile_toggle__footer">
-              <IoExitSharp className="exit" />
-            </section>
-          </div>
-           )}
-
+              <section className="sidebar__mobile_toggle__header">
+                <h1 className="">QUIZ</h1>
+                <div className="sidebar__mobile_toggle__header_icons">
+                  <Link to="/">
+                    <AiFillHome
+                      className={`${locationPath("/") ? "icons" : "icon"}`}
+                    />
+                  </Link>
+                  <Link to="/quizes">
+                    <MdQuiz
+                      className={`${
+                        locationPath("/quizes") ? "icons" : "icon"
+                      }`}
+                    />
+                  </Link>
+                </div>
+              </section>
+              <section className="sidebar__mobile_toggle__footer">
+                <IoExitSharp className="exit" />
+              </section>
+            </div>
+          )}
         </section>
       </nav>
     </>
