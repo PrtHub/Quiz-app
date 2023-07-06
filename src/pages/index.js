@@ -1,4 +1,4 @@
-import Home from "./Home";
+import Home from "./Home/Home";
 import Quizes from "./Quizes";
 import Favorite from "./Favorite";
 import Quiz from "./Quiz";
