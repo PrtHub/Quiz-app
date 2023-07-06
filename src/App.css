@@ -1,1 +1,18 @@
+.app {
+  display: flex;
+  overflow: hidden;
+  gap: 40px;
+
+  font-family: var(--font-sans);
+}
+
+.app__sidebar {
+  flex: 0.1;
+  background-color: var(--color-white);
+}
+
+.app__main{
+  flex: 0.8;
+  width: 100%;
+}
 

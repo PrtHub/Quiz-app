@@ -1,13 +1,19 @@
 :root {
-  --font-alt: 'Open Sans', sans-serif;
+  --font-sans: 'Open Sans', sans-serif;
 
   --color-white: #FFFFFF;
+  --color-purple: #736cee;
+  --color-gray: #6a6681;
+  --color-green: #21b573;
   
 }
-
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+  body{
+    background-color: #f6f2ff;
+  }
