@@ -1,18 +1,53 @@
 .app {
   display: flex;
+  flex-direction: column;
   overflow: hidden;
-  gap: 40px;
-
+ 
   font-family: var(--font-sans);
 }
 
 .app__sidebar {
-  flex: 0.1;
-  background-color: var(--color-white);
+  padding: 0 5px;  
 }
 
 .app__main{
-  flex: 0.8;
   width: 100%;
 }
+
+@media screen and (min-width: 450px){
+  .app {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .app__sidebar {
+    flex: 0.12;
+  }
+  
+  .app__main{
+    flex: 0.88;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .app__sidebar {
+    flex: 0.08;
+  }
+  
+  .app__main{
+    flex: 0.92;
+  }
+}
+
+@media screen and (min-width: 1040px){
+  .app__sidebar {
+    flex: 0.05;
+  }
+  
+  .app__main{
+    flex: 0.95;
+  }
+}
+
+
 
