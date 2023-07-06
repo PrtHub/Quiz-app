@@ -1,0 +1,13 @@
+:root {
+  --font-alt: 'Open Sans', sans-serif;
+
+  --color-white: #FFFFFF;
+  
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
