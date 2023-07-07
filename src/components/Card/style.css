@@ -44,7 +44,7 @@
 .card__wrapper_content p {
     color: #acacb1;
 
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0.2px;
     line-height: 20px;
 }
@@ -66,4 +66,13 @@
     outline: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+@media screen and (min-width: 550px){
+   
+.card__wrapper_content p {
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+}
 }
