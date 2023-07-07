@@ -18,6 +18,11 @@ const Sidebar = () => {
     }
   };
 
+  const goBack = () => {
+    window.scrollTo(0, 0);
+    window.history.back();
+  };
+
   return (
     <>
       <nav className="sidebar">
@@ -38,7 +43,7 @@ const Sidebar = () => {
             </div>
           </section>
           <section className="sidebar__footer">
-            <IoExitSharp className="exit" />
+            <IoExitSharp className="exit" onClick={goBack}/>
           </section>
         </div>
 
@@ -80,7 +85,7 @@ const Sidebar = () => {
                 </div>
               </section>
               <section className="sidebar__mobile_toggle__footer">
-                <IoExitSharp className="exit" />
+                <IoExitSharp className="exit" onClick={goBack}/>
               </section>
             </div>
           )}
