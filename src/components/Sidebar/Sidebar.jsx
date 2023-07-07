@@ -63,7 +63,7 @@ const Sidebar = () => {
           {toggle && (
             <div className="sidebar__mobile_toggle">
               <section className="sidebar__mobile_toggle__header">
-                <h1 className="">QUIZ</h1>
+              <img src={quiz} alt="" className="sidebar__mobile-img"/>
                 <div className="sidebar__mobile_toggle__header_icons">
                   <Link to="/">
                     <AiFillHome
