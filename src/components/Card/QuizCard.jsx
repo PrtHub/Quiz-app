@@ -19,7 +19,7 @@ const QuizCard = ({title, category}) => {
             voluptas fugiat a maiores temporibus!
           </p>
           <div className="card__wrapper_button">
-            <p>progessbar</p>
+            <p>free</p>
             <Link to={`/quiz/${category}`}> <button>Start</button></Link>
           </div>
         </section>

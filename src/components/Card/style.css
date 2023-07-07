@@ -57,6 +57,11 @@
     padding: 0 10px;
 }
 
+.card__wrapper_button p {
+    text-transform: capitalize;
+    color: var(--color-green);
+}
+
 .card__wrapper_button button {
     padding: 15px 20px;
     background-color: var(--color-purple);
