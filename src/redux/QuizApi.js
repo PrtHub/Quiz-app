@@ -5,7 +5,6 @@ export const quizApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://api.api-ninjas.com/v1",
     prepareHeaders: (headers) => {
-      // Set the API key in the request headers
       headers.set("X-Api-Key", import.meta.env.VITE_TRIVIA_API_KEY);
       return headers;
     },
@@ -17,5 +16,4 @@ export const quizApi = createApi({
   }),
 });
 
-// Generate the API hooks
 export const { useGetQuizQuery } = quizApi;
