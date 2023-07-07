@@ -1,5 +1,5 @@
 import Home from "./Home/Home";
-import Quizes from "./Quizes";
+import Quizes from "./Catagory/Quizes";
 import Favorite from "./Favorite";
 import Quiz from "./Quiz/Quiz";
 
