@@ -5,6 +5,8 @@ import { FiMenu } from "react-icons/fi";
 import "./style.css";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
+import quiz from '../../assets/Quiz.png'
+
 
 const Sidebar = () => {
   const [toggle, setToggle] = useState(false);
@@ -21,7 +23,7 @@ const Sidebar = () => {
       <nav className="sidebar">
         <div className="sidebar__menu_desktop">
           <section className="sidebar__header">
-            <h1 className="sidebar__header_title">QUIZ</h1>
+            <img src={quiz} alt="" className="sidebar__header-img"/>
             <div className="sidebar__header_icons">
               <Link to="/">
                 <AiFillHome
@@ -41,7 +43,7 @@ const Sidebar = () => {
         </div>
 
         <section className="sidebar__mobile_menu">
-          <h1 className="sidebar__header_title">QUIZ</h1>
+        <img src={quiz} alt="" className="sidebar__mobile-img"/>
           <div className="sidebar__mobile_menu-icons">
             {toggle ? (
               <AiOutlineClose

@@ -1,50 +1,146 @@
 .sidebar {
-    width: 100%;
-    height: 100%;  
-    
-
+  width: 100%;
+  height: 100%;
 }
 
-.sidebar__menu_desktop{
-    display: none;
+.sidebar__menu_desktop {
+  display: none;
 }
 
-.sidebar__mobile_menu{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: var(--color-white);
+.sidebar__mobile_menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--color-white);
 
-    position: relative;
+  position: relative;
 }
-.sidebar__mobile_menu-icons{
-    color: var(--color-gray)
+.sidebar__mobile_menu-icons {
+  color: var(--color-gray);
 }
 
 .sidebar__mobile_menu-icons {
-   cursor: pointer;
+  cursor: pointer;
 }
 
 .sidebar__mobile_toggle {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 
-    width: 70px;
+  width: 70px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: start;
+  padding: 10px 0;
+  background-color: var(--color-white);
+}
+
+.sidebar__mobile_toggle__header {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 80px;
+}
+
+.sidebar__mobile_toggle__header_icons {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 100%;
+  color: var(--color-purple);
+}
+
+.icon:hover {
+  width: 40px;
+  height: 40px;
+  color: var(--color-purple);
+  padding: 10px;
+  background-color: rgba(115, 108, 238, 0.25);
+
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.icons {
+  width: 40px;
+  height: 40px;
+  color: var(--color-purple);
+  padding: 10px;
+  background-color: rgba(115, 108, 238, 0.25);
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.exit {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 100%;
+  color: var(--color-orenge);
+}
+
+.exit:hover {
+  width: 40px;
+  height: 40px;
+  color: var(--color-orenge);
+  padding: 10px;
+  background-color: rgba(255, 165, 0, 0.2);
+
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.sidebar__mobile-img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 550px) {
+  .sidebar {
+    width: 100%;
     height: 100vh;
+  }
+  .sidebar__menu_desktop {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: start;
-    padding: 10px 0;
+    padding: 20px 0 10px 0;
     background-color: var(--color-white);
-}
+  }
 
-.sidebar__mobile_toggle__header{
+  .sidebar__mobile_menu {
+    display: none;
+  }
+
+  .sidebar__header {
     width: 100%;
     height: 100%;
 
@@ -53,9 +149,15 @@
     align-items: center;
     justify-content: flex-start;
     gap: 80px;
-}
+  }
 
-.sidebar__mobile_toggle__header_icons{
+  .sidebar__header-img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+  }
+
+  .sidebar__header_icons {
     width: 100%;
     height: 100%;
 
@@ -64,31 +166,29 @@
     align-items: center;
     justify-content: flex-start;
     gap: 20px;
-}
+  }
 
-.icon {
+  .icon {
     width: 40px;
     height: 40px;
     background-color: white;
     padding: 10px;
     border-radius: 100%;
     color: var(--color-purple);
-}
+  }
 
-.icon:hover{
+  .icon:hover {
     width: 40px;
     height: 40px;
     color: var(--color-purple);
     padding: 10px;
     background-color: rgba(115, 108, 238, 0.25);
-    
 
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+  }
 
-}
-
-.icons {
+  .icons {
     width: 40px;
     height: 40px;
     color: var(--color-purple);
@@ -96,127 +196,25 @@
     background-color: rgba(115, 108, 238, 0.25);
     cursor: pointer;
     border-radius: 100%;
+  }
 
-}
-
-.exit {
+  .exit {
     width: 40px;
     height: 40px;
     background-color: white;
     padding: 10px;
     border-radius: 100%;
-    color: var(--color-orenge)
-}
+    color: var(--color-orenge);
+  }
 
-.exit:hover{
+  .exit:hover {
     width: 40px;
     height: 40px;
     color: var(--color-orenge);
     padding: 10px;
     background-color: rgba(255, 165, 0, 0.2);
 
-
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-
-}
-
-
-
-@media screen and (min-width: 550px) {
-    .sidebar {
-        width: 100%;
-        height: 100vh;    
-    }
-    .sidebar__menu_desktop {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-items: start;
-        padding: 10px 0;
-        background-color: var(--color-white);
-    }
-
-    .sidebar__mobile_menu{
-        display: none;
-    }
-    
-    .sidebar__header{
-        width: 100%;
-        height: 100%;
-    
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 80px;
-    }
-    
-    .sidebar__header_icons{
-        width: 100%;
-        height: 100%;
-    
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 20px;
-    }
-    
-    .icon {
-        width: 40px;
-        height: 40px;
-        background-color: white;
-        padding: 10px;
-        border-radius: 100%;
-        color: var(--color-purple);
-    }
-    
-    .icon:hover{
-        width: 40px;
-        height: 40px;
-        color: var(--color-purple);
-        padding: 10px;
-        background-color: rgba(115, 108, 238, 0.25);
-        
-    
-        transition: all 0.3s ease-in-out;
-        cursor: pointer;
-    
-    }
-    
-    .icons {
-        width: 40px;
-        height: 40px;
-        color: var(--color-purple);
-        padding: 10px;
-        background-color: rgba(115, 108, 238, 0.25);
-        cursor: pointer;
-        border-radius: 100%;
-    
-    }
-    
-    .exit {
-        width: 40px;
-        height: 40px;
-        background-color: white;
-        padding: 10px;
-        border-radius: 100%;
-        color: var(--color-orenge)
-    }
-    
-    .exit:hover{
-        width: 40px;
-        height: 40px;
-        color: var(--color-orenge);
-        padding: 10px;
-        background-color: rgba(255, 165, 0, 0.2);
-    
-    
-        transition: all 0.3s ease-in-out;
-        cursor: pointer;
-    
-    }
+  }
 }
