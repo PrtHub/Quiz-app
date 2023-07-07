@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useGetQuizQuery } from "../../redux/QuizApi";
 
 import "./style.css";
+import { Loader } from "../../components";
 
 const Quiz = () => {
   const { category } = useParams();
@@ -21,7 +22,7 @@ const Quiz = () => {
     return <p className="quiz_completed">Quiz completed!</p>;
   }
 
-  if (isFetching) return "Loading..."
+  if (isFetching) return <Loader/>
 
   const sliceData = data?.slice(questionIndex, questionIndex + 1);
 
