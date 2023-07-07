@@ -9,20 +9,22 @@ const Quiz = () => {
   console.log(data);
 
   const [userAnswer, setUserAnswer] = useState("");
+  const [questionIndex, setQuestionIndex] = useState(0);
 
   useEffect(() => {
-    setUserAnswer(""); 
+    setUserAnswer("");
   }, [category]);
 
   if (isFetching) return "Loading.....";
 
-  const sliceData = data?.slice(0, 1);
-
+  const sliceData = data?.slice(questionIndex, questionIndex + 1);
 
   const handleAnswerSubmit = () => {
-    const originalAnswer = sliceData[0]?.answer;
+    const originalAnswer = sliceData[questionIndex]?.answer;
     if (userAnswer.toLowerCase() === originalAnswer.toLowerCase()) {
       alert("Correct answer!");
+      setQuestionIndex(questionIndex + 1);
+      setUserAnswer("");
     } else {
       alert("Incorrect answer!");
     }
@@ -31,6 +33,7 @@ const Quiz = () => {
   return (
     <>
       <div className="quiz">
+        {/* <section></section> */}
         {sliceData?.map((quiz) => (
           <section className="quiz__wrapper" key={quiz?.answer}>
             <h1>{quiz?.question}</h1>
@@ -53,5 +56,3 @@ const Quiz = () => {
 };
 
 export default Quiz;
-
-
