@@ -4,6 +4,7 @@ import { useGetQuizQuery } from "../../redux/QuizApi";
 
 import "./style.css";
 import { Loader } from "../../components";
+import { toast } from "react-toastify";
 
 const Quiz = () => {
   const { category } = useParams();
@@ -29,12 +30,14 @@ const Quiz = () => {
   const handleAnswerSubmit = () => {
     const originalAnswer = data[questionIndex]?.answer;
     if (userAnswer.toLowerCase() === originalAnswer.toLowerCase()) {
-      alert("Correct answer!");
+      toast.success("Correct answer!");
       setQuestionIndex(questionIndex + 1);
       setUserAnswer("");
       setScore(score + 1);
+    } else if (userAnswer === "") {
+      toast.warning("Give an answer!");
     } else {
-      alert("Incorrect answer!");
+      toast.error("Incorrect answer!");
     }
   };
 
