@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import coach from "../../assets/coach.avif";
 import "./style.css";
 
-const QuizCard = () => {
+const QuizCard = ({title, category}) => {
   return (
     <>
       <div className="card__wrapper">
@@ -11,7 +12,7 @@ const QuizCard = () => {
         </section>
 
         <section className="card__wrapper_content">
-          <h1>General</h1>
+          <h1>{title}</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Exercitationem fugit ducimus architecto est laudantium, ipsa
@@ -19,7 +20,7 @@ const QuizCard = () => {
           </p>
           <div className="card__wrapper_button">
             <p>progessbar</p>
-            <Link to='/quiz'> <button>Start</button></Link>
+            <Link to={`/quiz/${category}`}> <button>Start</button></Link>
           </div>
         </section>
       </div> 

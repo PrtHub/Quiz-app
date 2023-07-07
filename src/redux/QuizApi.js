@@ -12,7 +12,7 @@ export const quizApi = createApi({
   }),
   endpoints: (builder) => ({
     getQuiz: builder.query({
-      query: () => "/trivia?category=general&limit=10000",
+      query: (category) => `/trivia?category=${category}&limit=10000`,
     }),
   }),
 });

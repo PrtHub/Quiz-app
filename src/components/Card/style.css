@@ -36,6 +36,11 @@
 
 }
 
+.card__wrapper_content h1 {
+    text-transform: capitalize;
+    color: var(--color-gray)
+}
+
 .card__wrapper_content p {
     color: #acacb1;
 

@@ -1,27 +1,24 @@
 import { QuizCard } from "../../components";
-import { useGetQuizQuery } from "../../redux/QuizApi";
 
 import './style.css'
 
 const Home = () => {
-  const { data } = useGetQuizQuery();
-  console.log(data);
-
+ 
   return (
     <>
     <section className="home">
        <h1>Popular Categories</h1>
        <main className="home__wrapper">
-         <QuizCard/>
-         <QuizCard/>
-         <QuizCard/>
-         <QuizCard/>
-         <QuizCard/>
-         <QuizCard/>
-         <QuizCard/>
-         <QuizCard/>
-         <QuizCard/>
-         <QuizCard/>
+         <QuizCard title="geography" category="geography"/>
+         <QuizCard title="music" category="music"/>
+         <QuizCard title="mathematics" category="mathematics"/>
+         <QuizCard title="sportsleisure" category="sportsleisure"/>
+         <QuizCard title="peopleplaces" category="peopleplaces"/>
+         <QuizCard title="entertainment"category="entertainment"/>
+         <QuizCard title="toysgames"category="toysgames"/>
+         <QuizCard title="fooddrink"category="fooddrink"/>
+         <QuizCard title="sciencenature"category="sciencenature"/>
+         <QuizCard title="language"category="language"/>
        </main>
     </section>
     </>
