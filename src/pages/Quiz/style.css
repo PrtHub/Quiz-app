@@ -28,7 +28,8 @@
     font-size: 24px;
     font-weight: 500;
 
-    color: var(--color-gray)
+    color: var(--color-gray);
+    text-transform: none;
 }
 
 .quiz__wrapper_answer {
