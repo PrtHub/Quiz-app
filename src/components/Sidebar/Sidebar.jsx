@@ -66,7 +66,7 @@ const Sidebar = () => {
           </div>
 
           {toggle && (
-            <div className="sidebar__mobile_toggle">
+            <div className="sidebar__mobile_toggle slide-right ">
               <section className="sidebar__mobile_toggle__header">
               <img src={quiz} alt="" className="sidebar__mobile-img"/>
                 <div className="sidebar__mobile_toggle__header_icons">
