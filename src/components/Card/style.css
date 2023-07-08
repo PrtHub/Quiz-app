@@ -16,7 +16,7 @@
 }
 
 
-.card__wrapper_img img {
+.card__wrapper_img LazyLoadImage {
     width: 100%;
     height: 100%;
     object-fit: cover;

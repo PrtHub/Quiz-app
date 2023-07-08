@@ -1,16 +1,24 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import coach from "../../assets/coach.avif";
+import place from "../../assets/place.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 import "./style.css";
 
-const QuizCard = ({title, category}) => {
+const QuizCard = ({ title, category, image }) => {
   return (
     <>
       <div className="card__wrapper">
         <section className="card__wrapper_img">
-          <img src={coach} alt="" />
+          <LazyLoadImage
+            src={image}
+            PlaceholderSrc={place}
+            width={300}
+            height={220}
+            effect="blur"
+          />
         </section>
-
         <section className="card__wrapper_content">
           <h1>{title}</h1>
           <p>
@@ -20,10 +28,13 @@ const QuizCard = ({title, category}) => {
           </p>
           <div className="card__wrapper_button">
             <p>free</p>
-            <Link to={`/quiz/${category}`}> <button>Start</button></Link>
+            <Link to={`/quiz/${category}`}>
+              {" "}
+              <button>Start</button>
+            </Link>
           </div>
         </section>
-      </div> 
+      </div>
     </>
   );
 };
