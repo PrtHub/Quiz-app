@@ -19,13 +19,13 @@ const Home = () => {
     <section className="home">
        <h1>Popular Categories</h1>
        <main className="home__wrapper">
-         <QuizCard title="geography" category="geography" image={geo}/>
          <QuizCard title="music" category="music" image={music}/>
          <QuizCard title="mathematics" category="mathematics" image={math}/>
          <QuizCard title="sports leisure" category="sportsleisure" image={sports}/>
          <QuizCard title="people places" category="peopleplaces" image={people}/>
          <QuizCard title="entertainment"category="entertainment" image={entertainment}/>
          <QuizCard title="toys games"category="toysgames" image={game}/>
+         <QuizCard title="geography" category="geography" image={geo}/>
          <QuizCard title="food drink"category="fooddrink" image={food}/>
          <QuizCard title="science nature"category="sciencenature" image={science}/>
          <QuizCard title="language"category="language" image={lan}/>
