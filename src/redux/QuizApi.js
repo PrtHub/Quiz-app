@@ -5,7 +5,7 @@ export const quizApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://api.api-ninjas.com/v1",
     prepareHeaders: (headers) => {
-      headers.set("X-Api-Key", import.meta.env.VITE_TRIVIA_API_KEY);
+      headers.set("X-Api-Key", "yd/CEUAO0KImA0w3Ur62Cg==AYGz8OEs0C4etV9r");
       return headers;
     },
   }),
